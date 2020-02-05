@@ -1,20 +1,31 @@
 import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import { MuiThemeProvider } from '@material-ui/core/styles';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
 
-function App() {
+import AppHeader from './components/app-header/AppHeader.js';
+import Pages from './pages';
+
+import './pages/Pages.css';
+
+const theme = createMuiTheme({});
+
+function AppRouter() {
   return (
-    <div className="App">
-      <MuiThemeProvider>
-        <Container maxWidth="lg">
-          <Typography component="h1" variant="h5">Create React App</Typography>
-        </Container>
-      </MuiThemeProvider>
-    </div>
-  );
-}
+    <BrowserRouter onUpdate={() => window.scrollTo(0, 0)}>
+      <Switch>
+        <MuiThemeProvider theme={theme}>
+          <CssBaseline />
+          <AppHeader />
+          <main className="main-container">
+            <Route exact path="/" component={Pages.Home} />
+            <Route exact path="/users" component={Pages.Users} />
+          </main>
+        </MuiThemeProvider>
+      </Switch>
+    </BrowserRouter>
+  )
+};
 
-export default App;
+export default AppRouter;

@@ -1,0 +1,9 @@
+.spinner {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.MuiListItem-root span {
+  display: block;
+}
