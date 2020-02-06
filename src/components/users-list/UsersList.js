@@ -44,7 +44,7 @@ function UsersList() {
   }
 
   return (
-    <List>
+    <List className="users-list-component">
       <Divider component="li" />
       {data.users.map(user => (
         <React.Fragment key={user.id}>

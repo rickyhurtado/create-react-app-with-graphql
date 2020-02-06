@@ -7,8 +7,6 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import AppHeader from './components/app-header/AppHeader.js';
 import AppRoutes from './components/app-routes/AppRoutes.js';
 
-import './pages/Pages.css';
-
 const theme = createMuiTheme({});
 
 function App() {
