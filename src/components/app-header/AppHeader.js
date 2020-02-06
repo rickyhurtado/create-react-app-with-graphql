@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -18,7 +18,7 @@ function AppHeader() {
   return (
     <AppBar position="sticky">
       <Toolbar>
-        <Typography variant="h6">
+        <Typography className="app-header-title" variant="h6">
           GraphQL: React and Rails
         </Typography>
 

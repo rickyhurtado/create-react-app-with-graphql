@@ -1,5 +1,8 @@
-.app-header-nav {
-  margin-left: 2rem;
+.MuiToolbar-root {
+  flex-wrap: wrap;
+}
+.app-header-title {
+  flex-grow: 1;
 }
 .app-header-nav .MuiLink-root:not(:first-child) {
   margin-left: 1rem;
