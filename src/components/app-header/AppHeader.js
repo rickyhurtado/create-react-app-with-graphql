@@ -24,6 +24,7 @@ function AppHeader() {
 
         <nav className="app-header-nav">
           <ButtonLink title="Home" to="/" />
+          <ButtonLink title="Posts" to="/posts" />
           <ButtonLink title="Users" to="/users" />
         </nav>
       </Toolbar>
